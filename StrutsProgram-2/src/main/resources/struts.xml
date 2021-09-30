@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+<struts>
+
+	<constant name="struts.devMode" value="true"/>
+	<constant name="struts.objectFactory" value="spring"/>
+	
+    <package name="default" extends="json-default">
+         
+        <action name="loginweb" class="com.example.demo.ProfileAction" method="execute">
+            <result name="success">welcome.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        
+      
+    </package>
+</struts>
